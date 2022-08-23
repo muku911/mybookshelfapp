@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #3cd3f5;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper .container {
+  border-radius: 8px;
+  margin: 16px;
+  background: #5085f7;
+  color: white;
+  padding: 16px;
+  flex-grow: 1;
+  height: fit-content;
+}
+
+.wrapper .container .container-header {
+  text-align: center;
+}
+
+.item {
+  border-radius: 16px;
+  margin-top: 16px;
+  padding: 12px 24px 12px 24px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  flex-grow: 2;
+}
+
+.item > .inner h3 {
+  color: #6e50f7;
+  margin-bottom: unset;
+}
+
+.item > .inner p {
+  margin-top: 5px;
+  color: black;
+}
+
+.top-right-button {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 99;
+  background-color: #3cd3f5;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background: #3cd3f5;
+  background-size: contain;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.form {
+  padding: 16px;
+  height: 300px;
+  border-radius: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form-group label {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+input[type="text"] {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.btn-submit {
+  width: fit-content;
+  border-radius: 16px;
+  padding: 12px 12px;
+  border: 2px solid #000000;
+  color: black;
+  font-size: 18px;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: white;
+  float: right;
+}
+
+.btn-submit:hover {
+  background: #3cd3f5;
+  color: white;
+  border: 2px solid white;
+}
+
+input[type="text"],
+.btn-submit:focus {
+  outline: none;
+}
+
+.shadow {
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  padding-top: 5%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #50f7c2;
+  border-radius: 16px;
+  padding: 0;
+  border: 5px solid rgb(255, 255, 255);
+  width: 90%;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal-header {
+  margin: 5px;
+  padding: 1px 16px;
+  border-radius: 16px;
+  background-color: #15c492;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.close {
+  color: #ffffff;
+  background: #15c492;
+  border: none;
+  float: right;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(250, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.unread-button {
+  width: 35px;
+  height: 35px;
+  background: white;
+  background-size: contain;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.read-button {
+  width: 35px;
+  height: 35px;
+  background: white;
+  background-size: contain;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.done-button {
+  width: 35px;
+  height: 35px;
+  background: white;
+  background-size: contain;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-button {
+  width: 35px;
+  height: 35px;
+  background: white;
+  background-size: contain;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  float: right;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper .container {
+    width: 100%;
+  }
+
+  .check-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+  background-color: #7da9b4;
+  text-align: center;
+  font-weight: bold;
+}
