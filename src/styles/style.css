@@ -34,6 +34,7 @@ header {
   padding: 16px;
   flex-grow: 1;
   height: fit-content;
+  width: 50%;
 }
 
 .wrapper .container .container-header {
@@ -53,17 +54,17 @@ header {
   flex-grow: 2;
 }
 
-.item > .inner h3 {
+.item>.inner h3 {
   color: #6e50f7;
   margin-bottom: unset;
 }
 
-.item > .inner .body {
+.item>.inner .body {
   margin-top: 5px;
   color: black;
 }
 
-.item > .inner .dateCreated {
+.item>.inner .dateCreated {
   margin-top: 0;
   color: rgb(143, 143, 143);
 }
@@ -205,6 +206,7 @@ input[type="text"],
     top: -300px;
     opacity: 0;
   }
+
   to {
     top: 0;
     opacity: 1;
@@ -212,37 +214,40 @@ input[type="text"],
 }
 
 .unread-button {
-  width: 35px;
+  width: 60px;
   height: 35px;
   background: white;
   background-size: contain;
   margin-left: 10px;
   cursor: pointer;
   border: none;
+  background-repeat: no-repeat;
 }
 
 .read-button {
-  width: 35px;
+  width: 60px;
   height: 35px;
   background: white;
   background-size: contain;
   margin-left: 10px;
   cursor: pointer;
   border: none;
+  background-repeat: no-repeat;
 }
 
 .done-button {
-  width: 35px;
+  width: 60px;
   height: 35px;
   background: white;
   background-size: contain;
   margin-left: 10px;
   cursor: pointer;
   border: none;
+  background-repeat: no-repeat;
 }
 
 .delete-button {
-  width: 35px;
+  width: 60px;
   height: 35px;
   background: white;
   background-size: contain;
@@ -250,6 +255,7 @@ input[type="text"],
   cursor: pointer;
   border: none;
   float: right;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -17,7 +17,7 @@ function BookshelfList({ books, archived, onDelete, onMoveBook }) {
                 <div className="item shadow">
                     <div className="inner">
                         <h3>Tidak ada buku</h3>
-                        <p>Pindahkan buku dari rak lain atau masukan buku</p>
+                        <p className='body'>Pindahkan buku dari rak lain atau masukan buku</p>
                     </div>
                 </div>
             </div>

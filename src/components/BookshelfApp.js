@@ -1,5 +1,5 @@
 import React from 'react';
-import { getData } from '../utils/data';
+import { getInitialData } from '../utils/index'
 import BookshelfHeader from './BookshelfHeader';
 import BookshelfContent from './BookshelfContent';
 import BookshelfFooter from './BookshelfFooter';
@@ -9,7 +9,7 @@ class BookshelfApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            books: getData(),
+            books: getInitialData(),
             openModal: false,
         }
 
