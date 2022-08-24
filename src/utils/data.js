@@ -1,22 +1,25 @@
 const getData = () => {
     return [
         {
-            id: 1,
-            judul: '1453 Al Fatih: Battle of Varna',
-            pengarang: 'Handri Staria',
-            whatDoing: 'unread',
+            id: 4,
+            title: "ASDASAD",
+            body: "ASDASDASD",
+            archived: false,
+            createdAt: "2022-08-23"
         },
         {
-            id: 2,
-            judul: 'Why? Big Data',
-            pengarang: 'Yoo Heeseok',
-            whatDoing: 'read',
+            id: 5,
+            title: "ASDASAD",
+            body: "ASDASDASD",
+            archived: false,
+            createdAt: "2022-08-23"
         },
         {
-            id: 3,
-            judul: '99 Pesan Nabi',
-            pengarang: 'Veby Surya Wibawa',
-            whatDoing: 'finish',
+            id: 6,
+            title: "ASDASAD",
+            body: "ASDASDASD",
+            archived: false,
+            createdAt: "2022-08-23"
         }
     ];
 }

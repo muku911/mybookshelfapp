@@ -1,12 +1,12 @@
 import React from 'react';
 import BookshelfItem from './BookshelfItem';
 
-function BookshelfList({ books, whatDoing, onDelete, onMoveBook }) {
-    let countBook = books.filter(book => book.whatDoing === whatDoing).length;
+function BookshelfList({ books, archived, onDelete, onMoveBook }) {
+    let countBook = books.filter(book => book.archived === archived).length;
     if (countBook > 0) {
         return (
             <div className="list-item">
-                {books.filter(book => book.whatDoing === whatDoing).map(filteredBook => (
+                {books.filter(book => book.archived === archived).map(filteredBook => (
                     <BookshelfItem key={filteredBook.id} book={filteredBook} onDelete={onDelete} onMoveBook={onMoveBook} />
                 ))}
             </div>

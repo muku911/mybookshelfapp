@@ -19,16 +19,17 @@ class BookshelfApp extends React.Component {
         this.onMoveBookHandler = this.onMoveBookHandler.bind(this);
     }
 
-    onAddBookHandler({ judul, pengarang }) {
+    onAddBookHandler({ title, body }) {
         this.setState((prevState) => {
             return {
                 books: [
                     ...prevState.books,
                     {
                         id: +new Date(),
-                        judul,
-                        pengarang,
-                        whatDoing: 'unread',
+                        title,
+                        body,
+                        createdAt: new Date().toISOString().slice(0, 10),
+                        archived: false,
                     }
                 ]
             }
@@ -48,11 +49,11 @@ class BookshelfApp extends React.Component {
         this.setState({ openModal });
     }
 
-    onMoveBookHandler(id, whatDoingValue) {
+    onMoveBookHandler(id, archived) {
         this.setState((prevState) => {
             return {
                 books: prevState.books.map(
-                    book => book.id === id ? { ...book, whatDoing: whatDoingValue } : book
+                    book => book.id === id ? { ...book, archived: archived } : book
                 )
             }
         });

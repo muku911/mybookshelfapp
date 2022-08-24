@@ -6,27 +6,27 @@ class BookshelfInput extends React.Component {
 
         // inisialisasi state
         this.state = {
-            judul: '',
-            pengarang: '',
+            title: '',
+            body: '',
         }
 
-        this.onJudulChangeEventHandler = this.onJudulChangeEventHandler.bind(this);
-        this.onPengarangChangeEventHandler = this.onPengarangChangeEventHandler.bind(this);
+        this.onTitleChangeEventHandler = this.onTitleChangeEventHandler.bind(this);
+        this.onBodyChangeEventHandler = this.onBodyChangeEventHandler.bind(this);
         this.onSubmitEventHandler = this.onSubmitEventHandler.bind(this);
     }
 
-    onJudulChangeEventHandler(event) {
+    onTitleChangeEventHandler(event) {
         this.setState(() => {
             return {
-                judul: event.target.value,
+                title: event.target.value,
             }
         });
     }
 
-    onPengarangChangeEventHandler(event) {
+    onBodyChangeEventHandler(event) {
         this.setState(() => {
             return {
-                pengarang: event.target.value,
+                body: event.target.value,
             }
         });
     }
@@ -40,12 +40,12 @@ class BookshelfInput extends React.Component {
         return (
             <form className='form' onSubmit={this.onSubmitEventHandler}>
                 <div className="form-group">
-                    <label htmlFor="judul">Masukan Judul Buku</label>
-                    <input required type="text" placeholder="Judul Buku" value={this.state.judul} onChange={this.onJudulChangeEventHandler} />
+                    <label htmlFor="title">Masukan title</label>
+                    <input required type="text" placeholder="title" value={this.state.title} onChange={this.onTitleChangeEventHandler} />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="pengarang">Masukkan Pengarang Buku</label>
-                    <input required type="text" placeholder="Pengarang" value={this.state.pengarang} onChange={this.onPengarangChangeEventHandler} />
+                    <label htmlFor="body">Masukkan body</label>
+                    <input required type="text" placeholder="body" value={this.state.body} onChange={this.onBodyChangeEventHandler} />
                 </div>
                 <button className="btn-submit" type="submit">Tambah</button>
             </form>

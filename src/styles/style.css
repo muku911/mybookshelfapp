@@ -58,9 +58,14 @@ header {
   margin-bottom: unset;
 }
 
-.item > .inner p {
+.item > .inner .body {
   margin-top: 5px;
   color: black;
+}
+
+.item > .inner .dateCreated {
+  margin-top: 0;
+  color: rgb(143, 143, 143);
 }
 
 .top-right-button {

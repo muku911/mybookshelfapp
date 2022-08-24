@@ -5,17 +5,17 @@ function BookshelfContent({ books, onDelete, onMoveBook }) {
     return (
         <div className="wrapper">
             <div className="container">
-                <h2 className="container-header">List Buku Yang Belum Dibaca</h2>
-                <BookshelfList books={books} whatDoing={'unread'} onDelete={onDelete} onMoveBook={onMoveBook} />
+                <h2 className="container-header">List Buku Yang Belum ARCHIEF</h2>
+                <BookshelfList books={books} archived={false} onDelete={onDelete} onMoveBook={onMoveBook} />
             </div>
             <div className="container">
-                <h2 className="container-header">List Buku Yang Sedang Dibaca</h2>
-                <BookshelfList books={books} whatDoing={'read'} onDelete={onDelete} onMoveBook={onMoveBook} />
+                <h2 className="container-header">List Buku Yang Sudah ARCHIEF</h2>
+                <BookshelfList books={books} archived={true} onDelete={onDelete} onMoveBook={onMoveBook} />
             </div>
-            <div className="container">
+            {/* <div className="container">
                 <h2 className="container-header">List Buku Yang Sudah Dibaca</h2>
-                <BookshelfList books={books} whatDoing={'finish'} onDelete={onDelete} onMoveBook={onMoveBook} />
-            </div>
+                <BookshelfList books={books} archived={'finish'} onDelete={onDelete} onMoveBook={onMoveBook} />
+            </div> */}
         </div>
     );
 }

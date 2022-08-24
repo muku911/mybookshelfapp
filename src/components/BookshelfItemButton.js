@@ -10,11 +10,11 @@ function ReadButton({ id, onMoveBook }) {
 }
 
 function FinishButton({ id, onMoveBook }) {
-    return <button className="done-button" title="MAKE FINISH READ" onClick={() => onMoveBook(id, "finish")} style={{ backgroundImage: `url(${bookSVG})` }}></button>;
+    return <button className="done-button" title="ARCHIVE" onClick={() => onMoveBook(id, true)} style={{ backgroundImage: `url(${bookSVG})` }}></button>;
 }
 
 function UnreadButton({ id, onMoveBook }) {
-    return <button className="unread-button" title="MAKE UNREAD" onClick={() => onMoveBook(id, "unread")} style={{ backgroundImage: `url(${studyTimeSVG})` }}></button>;
+    return <button className="unread-button" title="MAKE UNARCHIVE" onClick={() => onMoveBook(id, false)} style={{ backgroundImage: `url(${studyTimeSVG})` }}></button>;
 }
 
 function DeleteButton({ id, onDelete }) {
